@@ -1,20 +1,18 @@
-// import { Button } from "./ui/button";
 import { Phone, Lightbulb, Menu } from "lucide-react";
 import { useState } from "react";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
-
-  
   const handleClick = () => {
       setIsOpen(!isOpen);
   };
+
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
+    <header id="nav" className="bg-white shadow-sm sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-            {/* Logo Section */}
-          <div className="flex items-center">
+          <a href="#home">
+            <div className="flex items-center">
             <div className="bg-linear-to-br from-amber-500 to-orange-500 text-white p-2 rounded-lg mr-3">
               <Lightbulb className="w-6 h-6" />
             </div>
@@ -23,8 +21,10 @@ export function Header() {
               <span className="text-xs text-gray-600 block -mt-1">Lighting Solution</span>
             </div>
           </div>
+          </a>
+          
 
-          {/* Desktop Navigation */}
+
           <nav className="hidden md:flex space-x-8">
             <a href="#home" className="text-gray-600 hover:text-amber-500 transition-colors">Home</a>
             <a href="#services" className="text-gray-600 hover:text-amber-500 transition-colors">Services</a>
@@ -33,7 +33,7 @@ export function Header() {
             <a href="#contact" className="text-gray-600 hover:text-amber-500 transition-colors">Contact</a>
           </nav>
 
-          {/* Contact Info & CTA */}
+          
           <div className="flex items-center space-x-4">
             <div className="hidden lg:flex items-center text-gray-600">
               <Phone className="w-4 h-4 mr-2" />
