@@ -39,7 +39,7 @@ export function Header() {
               <Phone className="w-4 h-4 mr-2" />
               <span>(880) 123-4567890</span>
             </div>
-            <div className="hidden sm:inline-flex bg-linear-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600">
+            <div className="hidden sm:inline-flex bg-linear-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 px-2 py-1 rounded-md text-white font-medium cursor-pointer transition-colors">
               Free Quote
             </div>
             <div className="md:hidden">
