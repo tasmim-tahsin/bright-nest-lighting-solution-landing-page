@@ -63,24 +63,23 @@ export function Services() {
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <div key={index} className="group hover:shadow-lg transition-shadow duration-300">
+            <div key={index} className=" mx-2 group hover:shadow-lg transition-shadow duration-300 rounded-lg border border-gray-200">
               <div className="relative overflow-hidden rounded-t-lg">
                 <img
                   src={service.image}
-                  alt={service.title}
                   className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
-                <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm p-3 rounded-lg">
-                  <service.icon className="w-6 h-6 text-amber-600" />
+                <div className="absolute top-4 left-4 bg-white/90 p-3 rounded-lg">
+                  <service.icon className="w-4 h-4 text-amber-600" />
                 </div>
               </div>
-              <div className="p-6 bg-white rounded-b-lg shadow-sm">
+              <div className="p-6 bg-white">
                 <div className="text-xl">{service.title}</div>
                 <div className="text-gray-600">
                   {service.description}
                 </div>
               </div>
-              <div className="p-6 bg-gray-50 rounded-b-lg group-hover:bg-white transition-colors">
+              <div className="p-6 bg-gray-50 rounded-b-lg">
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-sm text-gray-600">
@@ -89,7 +88,7 @@ export function Services() {
                     </li>
                   ))}
                 </ul>
-                <div className="w-full group-hover:bg-linear-to-r group-hover:from-amber-500 group-hover:to-orange-500 group-hover:text-white transition-colors border-amber-200 p-2 rounded-md text-center font-medium cursor-pointer">
+                <div className="bg-amber-500 hover:bg-amber-600 transition-normal text-white border-amber-200 p-2 rounded-md text-center font-medium cursor-pointer">
                   Learn More
                 </div>
               </div>
@@ -106,7 +105,7 @@ export function Services() {
             <p className="text-amber-50 mb-6 max-w-2xl mx-auto">
               Our lighting experts will assess your space and recommend the perfect potlight solution for your home or business.
             </p>
-            <div className="bg-white text-amber-600 hover:bg-gray-100 ">
+            <div className="bg-white text-amber-600 hover:bg-gray-100 rounded-md px-6 py-3 font-medium cursor-pointer inline-block">
               Schedule Free Consultation
             </div>
           </div>
